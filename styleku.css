@@ -1,0 +1,51 @@
+body {
+    background-color: #264168;
+    font-family: Nunito;
+    font-weight: 600;
+}
+
+.wrapper {
+    box-shadow: 0 0 40px 0;
+    max-width: 700px;
+    margin: 0 auto;
+    background-color: white;
+    margin: 2em auto;
+}
+
+.kepala {
+    text-align: center;
+    background: #57a2d1;
+    padding: 1.5em 2em 1.5em 2em;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.kepala p {
+    margin: 0;
+}
+
+span {
+    color: white;
+}
+
+.container {
+    padding: 0.5em 2em 1em 2em;
+    margin: 0;
+}
+
+.kontak {
+    background: #f8f9fa;
+    padding: 1.5em;
+    padding-bottom: 1em;
+    border-radius: 6px;
+}
+
+.tombol {
+    margin-top: 1.5em;
+    margin-bottom: 0.8em;
+}
+
+small {
+    font-size: 0.6em;
+    font-weight: 600;
+}
