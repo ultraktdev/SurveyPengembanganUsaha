@@ -112,11 +112,6 @@
 
     <!-- SCRIPT -->
     <script>
-
-        window.onload=function() {
-            history.pushState(http://127.0.0.1:5500/index.html,null, http://www.sampleurl.com)
-        }
-
         $(document).ready(function(){
             $('#formulir').submit(function(x){
                 // $('.kontak').toggle()
@@ -134,7 +129,7 @@
                 var urlencodedtext = encodeURIComponent("Halo, saya *" + namaLengkap + "*.\n" + "Saya menggunakan *" + survey1 + "* untuk berkomunikasi secara elektronik, " + "belanja online *" + survey2 + "*, " + "jualan online *" + survey3 + "*, " + "saya *" + survey4 + "* untuk punya usaha sendiri di bisnis online, dan saya *" + survey5 + "* untuk menerima informasi melalui *" + nomorWA + "* tentang pengembangan usaha online.");
                 
                 // Kirim WA
-                var whatsappphonenumber = 6282177771078;
+                var whatsappphonenumber = 6282177771078; // Jeffry Hermanto
                 var whatsapp_url = "https://api.whatsapp.com/send?phone="+whatsappphonenumber+"&text="+urlencodedtext;
                 window.location.href = whatsapp_url;
 
