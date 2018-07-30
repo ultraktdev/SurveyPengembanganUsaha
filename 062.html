@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Survey Pengembangan Usaha</title>
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="styleku.css">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,800" rel="stylesheet">
+  <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+  <link rel="manifest" href="favicon/site.webmanifest">
+  <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+
+  <!-- REPO GITHUB https://github.com/JeffryHermanto/SurveyPengembanganUsaha.git -->
+</head>
+
+<body>
+  <div class="wrapper">
+    <!-- JUDUL -->
+    <nav class="navbar navbar-light kepala">
+      <a class="navbar-brand" href="#">
+        <p>
+          <i class="fas fa-mobile-alt"></i>&nbsp;&nbsp;Survey Usaha
+          <span>Online</span>
+        </p>
+      </a>
+    </nav>
+
+    <div class="container">
+      <!-- ISI -->
+      <form id="formulir">
+        <br>
+        <div class="form-group">
+          <label for="survey1">1. Alat apa yang Anda gunakan untuk berkomunikasi secara elektronik?</label>
+          <select class="form-control" id="survey1" required>
+            <option value="">Pilih...</option>
+            <option value="PC / Laptop">PC / Laptop</option>
+            <option value="Tablet / iPad">Tablet / iPad</option>
+            <option value="Smartphone">Smartphone</option>
+            <option value="lainnya">Lainnya</option>
+          </select>
+        </div>
+        <hr>
+        <div class="form-group">
+          <label for="survey2">2. Apakah Anda pernah belanja online?</label>
+          <select class="form-control" id="survey2" required>
+            <option value="">Pilih...</option>
+            <option value="sebulan sekali">Sebulan sekali</option>
+            <option value="beberapa kali dalam sebulan">Beberapa kali dalam sebulan</option>
+            <option value="sering sekali">Sering sekali</option>
+            <option value="tidak pernah">Tidak pernah</option>
+          </select>
+        </div>
+        <hr>
+        <div class="form-group">
+          <label for="survey">3. Apakah Anda pernah jualan online?</label>
+          <select class="form-control" id="survey3" required>
+            <option value="">Pilih...</option>
+            <option value="C2C seperti di Tokopedia, Shopee, Bukalapak, dsb.">C2C seperti di Tokopedia, Shopee, Bukalapak, dsb.</option>
+            <option value="B2C seperti di Lazada, Amazon, dsb.">B2C seperti di Lazada, Amazon, dsb.</option>
+            <option value="sebagai Dropshipper">Sebagai Dropshipper</option>
+            <option value="tidak pernah">Tidak pernah</option>
+          </select>
+          <small>C2C = Customer to Customer&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;B2C = Business to Customer</small>
+        </div>
+        <hr>
+        <div class="form-group">
+          <label for="survey4">4. Apakah Anda tertarik untuk punya usaha sendiri di bisnis online?</label>
+          <select class="form-control" id="survey4" required>
+            <option value="">Pilih...</option>
+            <option value="sangat tidak tertarik">Sangat tidak tertarik</option>
+            <option value="tidak tertarik">Tidak tertarik</option>
+            <option value="tertarik">Tertarik</option>
+            <option value="sangat tertarik">Sangat tertarik</option>
+          </select>
+        </div>
+        <hr>
+        <div class="form-group">
+          <label for="survey5">5. Apakah Anda bersedia untuk menerima informasi tentang pengembangan usaha online?</label>
+          <select class="form-control" id="survey5" required>
+            <option value="">Pilih...</option>
+            <option value="">Sangat tidak bersedia</option>
+            <option value="tidak bersedia">Tidak bersedia</option>
+            <option value="bersedia, tapi tidak saat ini">Bersedia, tapi tidak saat ini</option>
+            <option value="bersedia, segera">Bersedia, segera dapatkan informasi</option>
+          </select>
+        </div>
+        <br>
+        <div class="kontak">
+          <p>Untuk informasi pengembangan usaha ini bisa dikirim ke:</p>
+          <div class="form-group">
+            <label for="formGroupExampleInput">
+              <i class="fab fa-whatsapp"></i>
+              <strong> WhatsApp</strong>
+            </label>
+            <input type="number" class="form-control" id="nomorWA" placeholder="Nomor WA Anda" required>
+          </div>
+          <div class="form-group">
+            <label for="formGroupExampleInput2">
+              <i class="far fa-user"></i>
+              <strong> Nama</strong>
+            </label>
+            <input type="text" class="form-control" id="namaLengkap" placeholder="Nama Lengkap Anda" required>
+          </div>
+        </div>
+
+        <input type="submit" class="btn btn-primary btn-lg btn-block tombol" value="Kirim">
+
+      </form>
+    </div>
+  </div>
+
+  <!-- SCRIPT -->
+  <script>
+    $(document).ready(function () {
+      $('#formulir').submit(function (x) {
+        // $('.kontak').toggle()
+        x.preventDefault();
+
+        var namaLengkap = $('#namaLengkap').val().toUpperCase();
+        var nomorWA = $('#nomorWA').val();
+        var survey1 = $('#survey1').val();
+        var survey2 = $('#survey2').val();
+        var survey3 = $('#survey3').val();
+        var survey4 = $('#survey4').val();
+        var survey5 = $('#survey5').val();
+
+        // Message WA
+        var urlencodedtext = encodeURIComponent("Halo, saya *" + namaLengkap + "*.\n" + "Saya menggunakan *" +
+          survey1 + "* untuk berkomunikasi secara elektronik, " + "belanja online *" + survey2 + "*, " +
+          "jualan online *" + survey3 + "*, " + "saya *" + survey4 +
+          "* untuk punya usaha sendiri di bisnis online, dan saya *" + survey5 +
+          "* untuk menerima informasi melalui *" + nomorWA + "* tentang pengembangan usaha online.");
+
+        // Kirim WA
+        var whatsappphonenumber = 6281287165465; // Lia Barus
+        var whatsapp_url = "https://api.whatsapp.com/send?phone=" + whatsappphonenumber + "&text=" +
+          urlencodedtext;
+        window.location.href = whatsapp_url;
+      });
+    });
+  </script>
+</body>
+
+</html>
